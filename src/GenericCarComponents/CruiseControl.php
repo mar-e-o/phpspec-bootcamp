@@ -7,6 +7,9 @@ class CruiseControl
     /** @var bool  */
     private $isTurnedOn = false;
 
+    /** @var bool  */
+    private $isActivated = false;
+
     /**
      * @return bool
      */
@@ -22,6 +25,28 @@ class CruiseControl
 
     public function turnOff()
     {
+        $this->deactivate();
         $this->isTurnedOn = false;
+    }
+
+    public function activate()
+    {
+        if (!$this->isTurnedOn()) {
+            throw new ActivationNotAllowedException();
+        }
+        $this->isActivated = true;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isActivated()
+    {
+        return $this->isActivated;
+    }
+
+    public function deactivate()
+    {
+        $this->isActivated = false;
     }
 }
