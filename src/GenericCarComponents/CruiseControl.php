@@ -4,21 +4,24 @@ namespace GenericCarComponents;
 
 class CruiseControl
 {
+    /** @var bool  */
+    private $isTurnedOn = false;
+
     /**
      * @return bool
      */
     public function isTurnedOn()
     {
-        return true;
+        return $this->isTurnedOn;
     }
 
     public function turnOn()
     {
-        // TODO: write logic here
+        $this->isTurnedOn = true;
     }
 
     public function turnOff()
     {
-        // TODO: write logic here
+        $this->isTurnedOn = false;
     }
 }
