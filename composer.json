@@ -1,0 +1,20 @@
+{
+    "name": "phpro/phpspec-bootcamp",
+    "description": "Bootcamp class for phpspec",
+    "type": "project",
+    "require": {
+        "phpspec/phpspec": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {"GenericCarComponents\\": "src/"}
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "authors": [
+        {
+            "name": "Mario Peeters",
+            "email": "m.peeters@wimionline.be"
+        }
+    ]
+}
