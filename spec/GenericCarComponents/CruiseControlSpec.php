@@ -20,6 +20,22 @@ class CruiseControlSpec extends ObjectBehavior
 
         // or even shorter via ObjectState Matcher
         $this->shouldBeTurnedOn();
-
     }
+
+    function it_can_be_turned_on()
+    {
+        $this->shouldNotBeTurnedOn();
+        $this->turnOn();
+        $this->shouldBeTurnedOn();
+    }
+
+    function it_can_be_turned_off()
+    {
+        $this->turnOn();
+        $this->shouldBeTurnedOn();
+
+        $this->turnOff();
+        $this->shouldNotBeTurnedOn();
+    }
+
 }
