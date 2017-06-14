@@ -12,4 +12,14 @@ class CruiseControlSpec extends ObjectBehavior
     {
         $this->shouldHaveType(CruiseControl::class);
     }
+
+    function it_should_know_if_it_is_turned_on()
+    {
+        // Via Identity Matcher
+        $this->isTurnedOn()->shouldBe(true);
+
+        // or even shorter via ObjectState Matcher
+        $this->shouldBeTurnedOn();
+
+    }
 }
