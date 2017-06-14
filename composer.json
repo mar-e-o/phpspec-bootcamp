@@ -6,7 +6,7 @@
         "phpspec/phpspec": "^3.4"
     },
     "autoload": {
-        "psr-4": {"GenericCarComponents\\": "src/"}
+        "psr-4": {"GenericCarComponents\\": "src/GenericCarComponents"}
     },
     "config": {
         "bin-dir": "bin"
